@@ -30,5 +30,58 @@ public class Main {
         printSeparator();
         int total = sum(issuesByMonths);
         printIssues(total);
+
+        System.out.println("Homework");
+        System.out.println("Task №1\n");
+
+        checksDisplaysYearResult(2021);
+
+        System.out.println("Task №2\n");
+
+        printIOSAndAndroidPrograms(0,2014);
+
+        System.out.println("Task №3\n");
+
+        acceptsDistanceReturns(111);
     }
-}
+
+    public static void checksDisplaysYearResult(int copyYear) {
+
+        if (copyYear > 1584 && (copyYear % 4 == 0 && copyYear % 100 != 0 || copyYear % 400 == 0)) {
+            System.out.println(copyYear + " год является високосным");
+        } else {
+            System.out.println(copyYear + " год является не високосным");
+        }
+    }
+
+    public static void printIOSAndAndroidPrograms(int clientCopy, int year) {
+        int deviceYear = 2015;
+        if (clientCopy== 0 && year < deviceYear) {
+            System.out.println( "Установите облегченную версию приложения для iOS по ссылке.");
+        } else if (clientCopy == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке.");
+        } else if (clientCopy == 1 && year < deviceYear) {
+            System.out.println ("Установите облегченную версию приложения для Android по ссылке.");
+        } else if (clientCopy == 1) {
+            System.out.println ("Установите версию приложения для Android по ссылке.");
+        } else {
+            System.out.println("Такая система не поддерживается.");
+        }
+
+    }
+
+    public static void acceptsDistanceReturns(int distance) {
+        int days = 1;
+        if (distance <= 20) {
+            System.out.println("Доставка занимает: " + days + " день");
+        } else if (distance > 20 && distance <= 60){
+            days = days + 1;
+            System.out.println("Доставка занимает: " + days + " дня");
+        } else if (distance > 60 && distance <= 100){
+            days = days + 2;
+            System.out.println("Доставка занимает: " + days + " дня");
+        } else {
+            System.out.println("Доставки нет.");
+        }
+    }
+    }

@@ -55,12 +55,12 @@ public class Main {
     }
 
     public static void printIOSAndAndroidPrograms(int clientCopy, int year) {
-        int deviceYear = 2015;
-        if (clientCopy== 0 && year < deviceYear) {
+        int clientDeviceYear = 2015;
+        if (clientCopy == 0 && year < clientDeviceYear) {
             System.out.println( "Установите облегченную версию приложения для iOS по ссылке.");
         } else if (clientCopy == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке.");
-        } else if (clientCopy == 1 && year < deviceYear) {
+        } else if (clientCopy == 1 && year < clientDeviceYear) {
             System.out.println ("Установите облегченную версию приложения для Android по ссылке.");
         } else if (clientCopy == 1) {
             System.out.println ("Установите версию приложения для Android по ссылке.");
@@ -78,7 +78,7 @@ public class Main {
             days = days + 1;
             System.out.println("Доставка занимает: " + days + " дня");
         } else if (distance > 60 && distance <= 100){
-            days = days + 2;
+            days = days + 1;
             System.out.println("Доставка занимает: " + days + " дня");
         } else {
             System.out.println("Доставки нет.");

@@ -38,7 +38,7 @@ public class Main {
 
         System.out.println("Task №2\n");
 
-        printIOSAndAndroidPrograms(0,2014);
+        printIOSAndAndroidPrograms(0,2024);
 
         System.out.println("Task №3\n");
 
@@ -55,12 +55,11 @@ public class Main {
     }
 
     public static void printIOSAndAndroidPrograms(int clientCopy, int year) {
-        int clientDeviceYear = 2015;
-        if (clientCopy == 0 && year < clientDeviceYear) {
+        if (clientCopy == 0 & year < 2015 ) {
             System.out.println( "Установите облегченную версию приложения для iOS по ссылке.");
         } else if (clientCopy == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке.");
-        } else if (clientCopy == 1 && year < clientDeviceYear) {
+        } else if (clientCopy == 1 && year < 2015) {
             System.out.println ("Установите облегченную версию приложения для Android по ссылке.");
         } else if (clientCopy == 1) {
             System.out.println ("Установите версию приложения для Android по ссылке.");
